@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blocky Animal</title>
+  </head>
+
+  <body onload="main()" style="background-color: lightblue;">
+    <canvas id="webgl" width="400" height="400" style="border: 2px solid black;">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <p id="numdot" style="display: none;"> XXX </p> <p>
+    <button type="button" id="showNumDot">Show / Hide Performance</button> <p>
+
+    <button type="button" id="clearCanvas">Clear Canvas</button> <p>
+
+    <hr> <p> <strong> Canvas Background Color: </strong>
+    <select id="canvasColorDropdown">
+      <option value="#000000">Black</option>
+      <option value="#FFFFFF">White</option>
+      <option value="#FF0000">Red</option>
+      <option value="#00FF00">Green</option>
+      <option value="#0000FF">Blue</option>
+      <option value="#FFFF00">Yellow</option>
+      <option value="#FFA500">Orange</option>
+      <option value="#800080">Purple</option>
+      <option value="#808080">Gray</option>
+      <option value="#FFC0CB">Pink</option>
+    </select>
+
+    <hr> <p> <strong> Quick Colors: </strong> <br>
+    <button type="button" id="red">Red</button>
+    <button type="button" id="green">Green</button>
+    <button type="button" id="blue">Blue</button>
+
+    <p> <strong> Color Scaling: </strong> <br>
+    Red <input type="range" min="0" max="100" value="0" class="slider" id="redSlider"> <br>
+    Green <input type="range" min="0" max="100" value="0" class="slider" id="greenSlider"> <br>
+    Blue <input type="range" min="0" max="100" value="0" class="slider" id="blueSlider"> <br>
+    Transparency <input type="range" min="0" max="100" value="100" class="slider" id="alphaSlider"> 
+
+    <hr> <p> <strong> Drawing Mode: </strong> <br>
+    <button type="button" id="point">Point</button>
+    <button type="button" id="triangle">Triangle</button>
+    <button type="button" id="circle">Circle</button>
+
+    <hr> <p> <strong> Shape Manipulation: </strong> <br>
+    Size <input type="range" min="5" max="40" value="0" class="slider" id="sizeSlider"> <br>
+    (Circles) Segments <input type="range" min="5" max="25" value="10" class="slider" id="segmentsSlider">
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="asg2.js"></script>
+  </body>
+</html>
